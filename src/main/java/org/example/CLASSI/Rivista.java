@@ -10,8 +10,8 @@ public class Rivista extends Pubblicazione{
     private String periodicita;
 
     @ManyToOne
-    @JoinColumn(name = "elemento_prestato2_id")
-    public Prestito prestito;
+    @JoinColumn(name = "prestito_id")
+    private Prestito prestito;
     public Prestito getPrestito() {return prestito;}
     public void setPrestito(Prestito prestito) {this.prestito = prestito;}
 

@@ -9,12 +9,15 @@ public class Prestito {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @OneToMany(mappedBy="id") //un prestito per tanti libri
-    public List<Libro> elementoPrestato;
-    @OneToMany(mappedBy="id")
-    public List<Rivista> elementoPrestato2; //un prestito per tante riviste
+    @OneToMany(mappedBy="prestito") //un prestito per tanti libri
+    private List<Libro> elementoPrestato;
+    @OneToMany(mappedBy="prestito")
+    private List<Rivista> elementoPrestato2; //un prestito per tante riviste
+    @Temporal(TemporalType.DATE)
     private Date dataInizioPrestito;
+    @Temporal(TemporalType.DATE)
     private Date dataRestituzionePrevista;
+    @Temporal(TemporalType.DATE)
     private Date dataRestituzioneEffettiva;
 
     //il prestito fa capo a diversi utenti.

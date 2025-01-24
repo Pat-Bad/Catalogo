@@ -22,7 +22,7 @@ public class Utente {
 
 
     @OneToMany (mappedBy = "utente")  //un utente può effettuare molti prestiti
-    public List<Prestito> prestiti = new ArrayList<>();
+    private List<Prestito> prestiti = new ArrayList<>();
     public void setPrestiti(List<Prestito> prestiti) {
         this.prestiti = prestiti;}
     public List<Prestito> getPrestiti() {

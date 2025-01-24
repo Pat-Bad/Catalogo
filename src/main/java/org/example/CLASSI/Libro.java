@@ -14,8 +14,8 @@ public class Libro extends Pubblicazione{
 
     //più libri possono andare in un prestito
     @ManyToOne
-    @JoinColumn (name = "elemento_prestato_id")
-    public Prestito prestito;
+    @JoinColumn (name = "prestito_id")
+    private Prestito prestito;
     public Prestito getPrestito() {return prestito;}
     public void setPrestito(Prestito prestito) {this.prestito = prestito;}
 
