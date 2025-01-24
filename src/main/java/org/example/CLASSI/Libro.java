@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 
 import java.util.Date;
 @Entity
-@Table
+@Table (name="libri")
 public class Libro extends Pubblicazione{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -2,7 +2,7 @@ package org.example.CLASSI;
 import jakarta.persistence.*;
 
 @Entity
-@Table
+@Table (name="riviste")
 public class Rivista extends Pubblicazione{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
